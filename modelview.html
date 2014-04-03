@@ -1,0 +1,113 @@
+<html>
+	<head>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function() {	
+
+		var id = '#dialog';
+	
+		//Get the screen height and width
+		var maskHeight = $(document).height();
+		var maskWidth = $(window).width();
+	
+		//Set heigth and width to mask to fill up the whole screen
+		$('#mask').css({'width':maskWidth,'height':maskHeight});
+		
+		//transition effect		
+		//$('#mask').fadeIn(1000);	
+		//$('#mask').fadeTo("slow",0.8);	
+	
+		//Get the window height and width
+		var winH = $(window).height();
+		var winW = $(window).width();
+              
+		//Set the popup window to center
+		$(id).css('top',  winH/2-$(id).height()/2);
+		$(id).css('left', winW/2-$(id).width()/2);
+	
+		//transition effect
+		//$("#mask").fadeIn(); 	
+		$(id).show();
+	
+	//if close button is clicked
+	$('.window .close').click(function (e) {
+		//Cancel the link behavior
+		e.preventDefault();
+		
+		$('#mask').hide();
+		$('.window').hide();
+	});		
+	
+	//if mask is clicked
+	//$('#mask').click(function () {
+		//$(this).hide();
+		//$('.window').hide();
+	//});		
+	
+});
+
+
+
+
+</script>
+
+
+<style type="text/css">
+
+#mask {
+  position:absolute;
+  left:0;
+  top:0;
+  z-index:9000;
+   
+
+  opacity: 0.9;
+   background-color:#f2f2f2;
+
+  
+}  
+#boxes .window {
+  position:absolute;
+  left:0;
+  top:0;
+  width:547px;
+  height:340px;
+  display:none;
+  z-index:9999;
+  padding:20px;
+  background-color: #eddede;
+  border-style:groove;
+  border-width:3px;
+  
+  
+}
+.text_popup
+{
+		
+	padding: 10px;
+}
+.close
+{
+	float:left;
+	margin-top:210px;
+	
+}
+  
+
+</style>
+	</head>
+	<body>
+		<div id="boxes">
+			<h1>images3</h1>
+<div  id="dialog" class="window">
+<p class="text_popup"> entered into the pop up window</p> <br>
+<a href="#" class="close"><span height="50" width="50">close</span></a>
+</div>
+<!-- Mask to cover the whole screen -->
+<div id="mask"></div>
+</div>
+
+
+	</body>
+</html>

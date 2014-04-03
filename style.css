@@ -1,0 +1,40 @@
+.wrapper{
+	 margin:auto;
+	 height: 800px;
+	 width:800px;
+	 border-width:2px;
+	 border-radius:2px;
+	 border-color: green;
+	 border-style:double;
+}
+.header{
+	height:100px;
+	width:800px;
+	background-color:yellow;
+}
+.description
+{
+	text-align:justify;
+	height:200px;
+	width:400px;
+	
+	overflow: hidden;
+}
+#image
+{
+	float:right;
+	margin-top:-200px;
+	margin-right:30px;
+	
+}
+.div_form{
+	margin-top:10px;
+	margin-left:100px;
+	border-width:2px;
+	 border-radius:2px;
+	 border-color: green;
+	 border-style:double;
+	 width:500px;
+	 padding:15px;
+}
+

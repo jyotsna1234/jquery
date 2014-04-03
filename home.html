@@ -1,0 +1,92 @@
+<!DOCTYPE >
+<html>
+<head>
+	<title> </title>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+ <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.9/jquery.validate.min.js"></script>
+<link rel="stylesheet" type="text/css" href="style.css">
+<script>
+	    $( window ).load(function() {
+	    	
+	    	$(".otherlag").hide();  
+        $("#others").change(function()
+        {
+        	$(".otherlag").toggle();
+        });
+       
+		$("#form").validate({
+                rules: {
+                    username: "required",
+                    password:{
+                    	required: true,
+                    minlength: 5
+                    	
+                    }
+                },submitHandler: function(form) {
+                    form.submit();
+                }
+                });
+                
+        
+        
+        
+        
+        runslide();
+	    	function runslide() {
+		    $('#image').fadeIn(800).fadeOut(1500);
+		    runslide();
+		    }
+    });
+    
+
+</script>
+
+
+
+  </head>
+  <body>
+  	<div class="wrapper">
+  		<div class="header">
+  			
+  		</div>
+<div class="body">
+  		<div class="content">
+  			<p class="description">
+  				
+			    The checkNum() function is created. It checks if a number is greater than 1. If it is, an exception is thrown
+			    The checkNum() function is called in a "try" block
+			    The exception within the checkNum() function is thrown
+			    The "catch" block retrives the exception and creates an object ($e) containing the exception information
+			    The error message from the exception is echoed by calling $e->getMessage() from the exception object
+
+  			</p>
+  			<img id="image" src="images.jpeg"/>
+  			</div>
+  			<div class="div_form">
+	  			<form id="form">
+	  				
+				<label>usernmae</label><input id="username"type="text" name="username"/><br>
+				<label>password</label><input type="password" name="password"/><br>
+				<input type="radio" name="male"/>male<input type="radio" name="female"/>female<br>
+				 languages known:<br>
+				 <input type="checkbox" name="telugu" value="telugu">telugu<br>
+				<input type="checkbox" name="hindi" value="hindi">hindi<br> 
+	
+				<input type="checkbox" name="english" value="english">english<br>
+				<input type="checkbox" name="others" value="others" id="others">others<br>
+				<div class="otherlag">
+					  	<input type="checkbox" name="korea" value="korea">korea<br>
+					  
+				  	</div>
+					<input type="submit" value="submit" id="submit">
+					
+	  			</form>
+	  		
+  		</div>
+</div>  
+</div>		
+
+  	
+  
+  </body>
+</html>
