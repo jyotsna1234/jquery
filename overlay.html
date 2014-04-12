@@ -1,0 +1,80 @@
+<html>
+	<head>
+		<script>
+			var overlayDiv=function(){ 
+             $("#dailog").overlay({
+                api: true,  
+                top: 260,
+                mask: {
+                    color: '#fff',
+                    loadSpeed: 200,
+                    opacity: 0.5
+                },
+                closeOnClick: false,
+                load: true
+            })
+        };
+        $(document).ready(function() {  
+        	  
+            overlayDiv();
+
+        });
+			
+		</script>
+		<style type="text/css">
+
+#mask {
+  position:absolute;
+  left:0;
+  top:0;
+  z-index:9000;
+   
+
+  opacity: 0.8;
+   background-color:#FFFF00;
+
+  
+}  
+#content .window {
+  position:absolute;
+  left:0;
+  top:0;
+  width:547px;
+  height:340px;
+  display:none;
+  z-index:9999;
+  padding:20px;
+  background-color: #eddede;
+  border-style:groove;
+  border-width:3px;
+  
+  
+}
+.text_popup
+{
+		
+	padding: 10px;
+}
+.close
+{
+	float:left;
+	margin-top:210px;
+	
+}
+</style>
+</head>
+	<body>
+		<div id="content">
+			<h1>images3</h1>
+<div  id="dialog" class="window">
+<p class="text_popup"> entered into the pop up window</p> <br>
+<a href="#" class="close"><span height="50" width="50">close</span></a>
+</div>
+<!-- Mask to cover the whole screen -->
+<div id="mask"></div>
+</div>
+
+
+	</body>
+
+</html>

@@ -1,0 +1,74 @@
+<html>
+	<head>
+		<title>animation page</title>
+		<link rel="stylesheet" href="animation.css">
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+		<script>
+		$(document).ready(function(){
+        $(".hide").hide();
+        $("#sale").animate({fontSize:'80px'},1500,function(){
+        $("#banner").animate({opacity:'0.6'},100,function(){
+        	loop();
+        	function loop()
+       {
+       $("#image").fadeOut(600).fadeIn(600);
+       loop();
+       }
+        });	
+        });
+        
+        $("#submit").click(function (){
+           $(".hide").show(1000);});
+        /*while(a<=100)
+        {
+        $("#image").fadeOut(500).fadeIn(500);
+        a++;	
+        }*/
+       });
+        
+               
+          function ShowToolTip()
+        {
+            var tooltip =document.getElementById("myToolTip");
+            tooltip.style.left=event.clientX;
+            tooltip.style.top=event.clientY;
+            tooltip.style.visibility="visible";
+        }
+        function HideToolTip()
+        {
+            var tooltip =document.getElementById("myToolTip");
+            tooltip.style.visibility = "hidden";
+        }
+               
+       </script>
+	</head>
+	
+	
+	<body>
+		<div class="wrap">
+		
+		<div id="banner">
+		<p id="sale">50%  off  sale</p>	
+		</div>
+		
+		<div id="body">
+			<div id="form">
+				
+			
+			<div id="myToolTip">Please enter ur email id</div>
+            <a href="" onmouseout="HideToolTip()" onmouseover="ShowToolTip()">
+		    <label for="emailid">Email id</label>
+			<input id="emailid" ></a><br><br>
+			
+			<label for="password" class="hide">Password</label>
+			<input id="password" class="hide"><br>
+			<input type="submit" value="submit" id="submit">
+		    </div>
+		    <div id="adds">
+		    	<img src="http://cdn3.fiverrcdn.com/photo2s/987556/v2_680/bannersample.jpg?1346169227" id="image">
+		    </div>
+		</div>
+		
+		</div>
+	</body>
+</html>

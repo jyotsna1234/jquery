@@ -1,0 +1,42 @@
+.wrap
+{
+	width:100%;
+}
+
+#banner
+{
+	background:#CEF6CE;
+	width:100%;
+	height:150px;
+	margin-top:20px;
+}
+
+#sale{
+   font-size:40px;
+   text-align:center;
+   padding-top:20px;
+}
+
+#body{
+	padding-top:3%;
+}
+#form{
+	float:left;
+	margin-top:200px;
+	margin-left:400px;
+	border:solid 1px;
+	padding:20px;
+}
+#image{
+	float:right;
+}
+ 
+ #myToolTip{
+ 	position: absolute; 
+ 	visibility: hidden;
+    border: 1px solid #000000; 
+    background-color:#ECF8E0; 
+    color:#000000
+   }
+   
+
