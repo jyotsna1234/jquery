@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
+<<<<<<< HEAD
 	<name>jquery</name>
+=======
+	<name>jquery-1</name>
+>>>>>>> c83a957e699bf94dd7704bfa9257e62d5c17da22
 	<comment></comment>
 	<projects>
 	</projects>
